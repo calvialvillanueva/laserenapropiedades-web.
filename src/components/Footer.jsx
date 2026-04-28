@@ -22,7 +22,7 @@ const Footer = () => {
           <ul>
             <li><Link to="/arriendo-la-serena">Arriendo en La Serena</Link></li>
             <li><Link to="/venta-propiedades-la-serena">Venta en La Serena</Link></li>
-            <li><Link to="/arriendo-verano-la-serena">Arriendo Verano 2026</Link></li>
+            <li><Link to="/arriendo-verano-la-serena">Arriendo de Temporada</Link></li>
             <li><Link to="/propiedades-coquimbo">Propiedades en Coquimbo</Link></li>
           </ul>
         </div>
