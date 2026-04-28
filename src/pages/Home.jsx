@@ -39,7 +39,7 @@ const Home = () => {
   return (
     <div className="page-home">
       {/* Hero Section */}
-      <section className="hero-section" style={{ backgroundImage: `url('/images/hero_banner_la_serena_1777330592007.png')` }}>
+      <section className="hero-section" style={{ backgroundImage: `url('/assets/propiedades/arriendo-diario.jpg')` }}>
         <div className="hero-overlay"></div>
         <div className="container hero-content animate-fade-in-up">
           <h1 className="title-xl text-white mb-2" style={{ textTransform: 'uppercase' }}>
