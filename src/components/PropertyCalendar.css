@@ -1,0 +1,153 @@
+/* ═══════════════════════════════
+   PropertyCalendar — pc-* classes
+   ═══════════════════════════════ */
+
+.pc-wrapper {
+  width: 100%;
+}
+
+.pc-months-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+/* ── Month Container ── */
+.pc-month {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+/* ── Month Header ── */
+.pc-month-header {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 0.9rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ── Weekdays Row ── */
+.pc-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background: rgba(25, 108, 142, 0.06);
+  border-bottom: 1px solid var(--border);
+}
+
+.pc-weekday {
+  text-align: center;
+  padding: 0.55rem 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+/* ── Day Grid ── */
+.pc-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 0.5rem;
+  gap: 3px;
+}
+
+.pc-cell {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: all 0.15s ease;
+  cursor: default;
+}
+
+.pc-empty {
+  background: transparent;
+}
+
+.pc-available {
+  background: rgba(25, 108, 142, 0.06);
+  color: var(--text-main);
+  cursor: pointer;
+}
+.pc-available:hover {
+  background: rgba(25, 108, 142, 0.18);
+  transform: scale(1.08);
+}
+
+.pc-reserved {
+  background: var(--secondary);
+  color: white;
+  font-weight: 700;
+}
+
+.pc-past {
+  background: transparent;
+  color: var(--text-muted);
+  opacity: 0.45;
+  text-decoration: line-through;
+}
+
+.pc-today {
+  ring: 2px solid var(--primary);
+  box-shadow: 0 0 0 2px var(--primary);
+  font-weight: 700;
+}
+
+/* ── Legend ── */
+.pc-legend {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.pc-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.pc-legend-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+.pc-legend-dot.pc-available {
+  background: rgba(25, 108, 142, 0.15);
+  cursor: default;
+}
+.pc-legend-dot.pc-available:hover {
+  transform: none;
+}
+.pc-legend-dot.pc-reserved {
+  background: var(--secondary);
+}
+.pc-legend-dot.pc-past {
+  background: rgba(0, 0, 0, 0.12);
+  opacity: 1;
+  text-decoration: none;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .pc-months-row {
+    grid-template-columns: 1fr;
+  }
+  .pc-cell {
+    font-size: 0.8rem;
+  }
+}
